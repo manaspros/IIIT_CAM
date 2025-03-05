@@ -1,0 +1,48 @@
+{
+    "faculty": [
+      {
+        "name": "Dr. Ramakrishna Bandi",
+        "department": "Department of Mathematics",
+        "image": "/team/ramakrishna.jpg"
+      },
+      {
+        "name": "Dr. Suresh Kumar",
+        "department": "Department of Computer Science",
+        "image": "/team/ramakrishna.jpg"
+      },
+      {
+        "name": "Dr. Priya Sharma",
+        "department": "Department of Electronics",
+        "image": "/team/ramakrishna.jpg"
+      }
+    ],
+    "phd-students": [
+      {
+        "name": "Amit Verma",
+        "researchArea": "Artificial Intelligence",
+        "image": "/team/ramakrishna.jpg"
+      },
+      {
+        "name": "Neha Gupta",
+        "researchArea": "Quantum Computing",
+        "image": "/team/ramakrishna.jpg"
+      },
+      {
+        "name": "Rajesh Kumar",
+        "researchArea": "Cybersecurity",
+        "image": "/team/ramakrishna.jpg"
+      }
+    ],
+    "developers": [
+      {
+        "name": "Atharva Suresh Bedekar",
+        "role": "Developer",
+        "image": "/team/atharva.jpg"
+      },
+      {
+        "name": "Manas Chaudhary",
+        "role": "Developer",
+        "image": "/team/atharva.jpg"
+      }
+    ]
+}

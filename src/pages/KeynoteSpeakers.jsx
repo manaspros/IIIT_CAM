@@ -9,7 +9,7 @@ export default function KeynoteSpeakers() {
   ));
 
   return (
-    <div className="w-full h-full py-20">
+    <div className="w-full h-full pt-8">
       <TitleText text="Keynote Speakers" />
       <Carousel items={cards} />
     </div>
