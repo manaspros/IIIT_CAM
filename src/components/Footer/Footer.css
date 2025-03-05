@@ -1,0 +1,355 @@
+.footer-section {
+  background: #1d5bad;
+  position: relative;
+  background-size: cover;
+  min-height: 35rem;
+  height: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-foot-centr {
+  height: 10rem;
+  width: 10rem;
+}
+
+.footer-section p {
+  color: white;
+}
+.p2 {
+  margin-bottom: 0 !important;
+}
+
+.fcontainer {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-top: 2.5rem;
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 3;
+  color: white;
+  margin: 5rem;
+  padding: auto;
+  margin-top: 40px;
+}
+
+.container2 ul {
+  line-height: 3.4rem;
+  margin-top: 2rem;
+}
+
+.container2 {
+  flex-grow: 6;
+  margin: 3rem;
+  color: white;
+  padding: auto;
+  max-width: 300px;
+}
+
+.no-bullets {
+  list-style-type: none;
+  padding-left: 0 !important;
+  position: relative;
+  top: -15px;
+}
+
+.container3 {
+  flex-grow: 1;
+  color: white;
+  margin: 3rem;
+}
+
+.container4 {
+  flex-grow: 5;
+  color: white;
+  margin: 3rem;
+}
+
+.container4 iframe {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  min-height: 30vh;
+  max-width: 80vw;
+  max-height: 40vh;
+}
+
+.container5 {
+  flex-grow: 2;
+  color: white;
+  width: 100%;
+  place-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.container3 a {
+  text-decoration: none;
+}
+
+.footer_social_Logo {
+  color: white;
+  margin: 2rem;
+  display: flex;
+  margin-left: 0rem;
+  align-items: center;
+}
+
+.i-text {
+  margin-left: 0.5rem;
+  color: white;
+}
+
+.h2 {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-style: Semibold;
+  font-weight: 600;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.no-bullets,
+.p1,
+.p2,
+.footer_social_Logo {
+  font-family: "Barlow Condensed", sans-serif;
+  font-style: regular;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+.container4 input {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  position: relative;
+  left: 30px;
+  width: 70%;
+  position: relative;
+  border-width: 0px;
+}
+
+.fill {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0.3rem;
+  background-color: white;
+  border-radius: 5rem;
+  margin-top: 2rem;
+  height: 0.1px;
+  position: relative;
+}
+.fill input {
+  outline: none;
+}
+
+.send {
+  cursor: pointer;
+  font-size: 2rem;
+  position: relative;
+  left: -15px;
+  top: 1px;
+  color: black;
+}
+
+.container4 input::placeholder {
+  color: black;
+}
+
+.f_icon {
+  position: relative;
+  bottom: 3px;
+}
+
+.ipdtls {
+  margin-left: 0.3vw;
+  padding-bottom: 2vw;
+}
+
+
+.formiksubscribeform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* .indiformhlderformik{
+  display: flex;
+  flex-direction: column;
+} */
+
+.labelformikfrms {
+  font-weight: 900;
+}
+
+.errormsgs {
+  color: red !important;
+  font-weight: 900;
+  margin-bottom: 1vw;
+}
+
+.secondlastname {
+  margin: 0.25vw 0;
+}
+
+.newsletterform00 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btnnewsformletter {
+  border: none;
+  outline: none;
+  background: none !important;
+}
+
+.inputtakingnewsletter {
+  font-weight: 500 !important;
+  font-family: "Nunito", sans-serif;
+}
+
+.inputtakingnewsletter:focus {
+  border: none !important;
+}
+@media only screen and (max-width: 1280px) and (min-width: 661px) {
+  .container4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  .container3 {
+    flex-grow: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 80px;
+  }
+  .footer_social_Logo {
+    margin-bottom: 0 !important;
+  }
+  #link_ln {
+    position: relative;
+    right: 5px;
+  }
+  .h2 {
+    display: flex;
+    justify-content: center;
+  }
+  .p2 {
+    padding-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .footer-section {
+    background-attachment: scroll;
+  }
+
+  .footer_social_Logo .i-text {
+    display: none;
+  }
+  .fcontainer {
+    padding-top: 0px;
+  }
+  .container1 {
+    margin: 2rem;
+  }
+  .container2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    max-width: none;
+  }
+  .container3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .s_head {
+    position: relative;
+    left: 82px;
+    margin-bottom: 60px;
+  }
+  #link_ln {
+    position: relative;
+    right: 0px;
+  }
+  .container4 {
+    margin-top: 40px;
+    margin-right: 48 px;
+  }
+  .container5 {
+    padding-bottom: 50px;
+    padding: 0;
+  }
+  .footer_social_Logo {
+    margin-bottom: 0px;
+  }
+  .p2 {
+    padding-bottom: 1rem;
+    margin-bottom: 0px;
+  }
+  .h2 {
+    display: flex;
+    justify-content: center;
+  }
+  .p1 {
+    font-family: Barlow Condensed;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .fill {
+    width: 100%;
+  }
+
+  .mnjkl {
+    margin-top: 0.5vw;
+    font-size: 4vw;
+  }
+
+  .ipdtls {
+    margin-left: 0.6vw;
+    padding-bottom: 4vw;
+  }
+
+  .errormsgs {
+    margin-bottom: 5vw;
+  }
+
+  .btnregistrnews {
+    padding: 1vw 2vw;
+    margin: 10vw 0 0 0;
+    font-size: 3vw;
+    margin-right: 23.5vw !important;
+  }
+
+  .secondlastname {
+    margin: 5vw 0;
+  }
+}
