@@ -1,4 +1,4 @@
-// src/components/AppleCardsCarousel.jsx
+// src/components/apple-cards-carousel.jsx
 import React, {
   useEffect,
   useRef,
@@ -74,7 +74,7 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
     <CarouselContext.Provider value={{ onCardClose: handleCardClose, currentIndex }}>
       <div className="relative w-full">
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-auto py-10 md:py-20 scroll-smooth scrollbar-hide"
+          className="flex w-full overflow-x-scroll overscroll-x-auto py-10 scroll-smooth scrollbar-hide"
           ref={carouselRef}
           onScroll={checkScrollability}
         >
@@ -108,7 +108,8 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
             onClick={scrollLeftFunc}
             disabled={!canScrollLeft}
           >
-            <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
+            {/* <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" /> */}
+            {"<"}
           </button>
           <button
             className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
@@ -116,6 +117,7 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
             disabled={!canScrollRight}
           >
             <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
+            {">"}
           </button>
         </div>
       </div>
@@ -229,10 +231,13 @@ export const Card = ({ card, index, layout = false }) => {
   );
 };
 
-export const BlurImage = ({ height, width, src, className, alt, ...rest }) => {
+export const BlurImage = ({ fill, height, width, src, className, alt, ...rest }) => {
   const [isLoading, setLoading] = useState(true);
+  // If fill is true, apply styles to cover the container
+  const style = fill ? { objectFit: "cover", width: "100%", height: "100%" } : {};
   return (
     <img
+      style={style}
       className={cn("transition duration-300", isLoading ? "blur-sm" : "blur-0", className)}
       onLoad={() => setLoading(false)}
       src={src}
