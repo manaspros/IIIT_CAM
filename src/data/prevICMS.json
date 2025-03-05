@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "title": "ICMS Project One",
+      "year": 2021,
+      "link": "/view-more/1"
+    },
+    {
+      "id": 2,
+      "title": "ICMS Project Two",
+      "year": 2022,
+      "link": "/view-more/2"
+    },
+    {
+      "id": 3,
+      "title": "ICMS Project Three",
+      "year": 2023,
+      "link": "/view-more/3"
+    }
+  ]
+  

@@ -1,24 +1,8 @@
 import TitleText from "../components/TitleText";
+import events from "../data/programs";
 
 export default function Programs() {
-    const events = [
-      {
-        title: "National Mathematics Day 2021",
-        date: "December 22, 2021",
-        description: "Celebration on the birth anniversary of Srinivasa Ramanujan",
-        image: "/event1.jpg", // Replace with actual image path
-        link: "#",
-      },
-      {
-        title: "International Workshop on Advanced Topics in Mathematics",
-        date: "December 22, 2021",
-        description:
-          "The workshop provides a platform to the students/researchers to present their research work and exchange their ideas.",
-        image: "/event2.jpg", // Replace with actual image path
-        link: "#",
-      },
-    ];
-  
+
     return (
       <div className="flex flex-col items-start">
         <TitleText text="Programs" />
