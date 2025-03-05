@@ -14,8 +14,6 @@ import {
 import { cn } from "../lib/utils"; // Adjust the path if needed
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../hooks/use-outside-click"; // Adjust the path if needed
-import { MdLocationOn } from "react-icons/md";
-import { FaArrowLeft } from "react-icons/fa6";
 
 export const CarouselContext = createContext({
   onCardClose: () => {},
@@ -76,7 +74,7 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
     <CarouselContext.Provider value={{ onCardClose: handleCardClose, currentIndex }}>
       <div className="relative w-full">
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-auto py-10 scroll-smooth scrollbar-hide"
+          className="flex w-full overflow-x-scroll overscroll-x-auto py-8 scroll-smooth scrollbar-hide"
           ref={carouselRef}
           onScroll={checkScrollability}
         >
@@ -106,16 +104,18 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
         </div>
         <div className="flex justify-end gap-2 mr-10">
           <button
-            className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+            className="relative z-40 h-10 w-10 rounded-full flex items-center justify-center disabled:opacity-50"
             onClick={scrollLeftFunc}
             disabled={!canScrollLeft}
+            style={{background: "white"}}
           >
-             &larr;
+            &larr;
           </button>
           <button
-            className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+            className="relative z-40 h-10 w-10 rounded-full flex items-center justify-center disabled:opacity-50"
             onClick={scrollRightFunc}
             disabled={!canScrollRight}
+            style={{background: "white"}}
           >
             &rarr;
           </button>

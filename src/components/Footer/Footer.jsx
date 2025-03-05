@@ -7,7 +7,7 @@ import Logo from "../../assets/IIITNR-Logo.png"
 
 const Footer = () => {
   return (
-    <div className="footer-section">
+    <div className="footer-section mt-10">
       <div className="fcontainer">
         <div className="container1">
           <a to="/">

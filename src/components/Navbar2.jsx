@@ -43,8 +43,8 @@ export default function Navbar() {
           <h1 className="text-xl font-bold text-[#4671AF] px-5">CAM</h1>
         </div>
         
-        <button onClick={() => setIsOpen(true)}>
-          <Menu size={28} />
+        <button onClick={() => setIsOpen(true)} style={{background: "white"}}>
+          <Menu size={28}/>
         </button>
       </div>
 
@@ -60,6 +60,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(false)}
             className="absolute top-4 right-4"
+            style={{background: "white"}}
           >
             <X size={24} />
           </button>
