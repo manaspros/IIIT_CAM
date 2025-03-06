@@ -49,7 +49,8 @@ export default function Navbar() {
   const handleNavigation = (item) => {
     const pageRoutes = {
       "About": "/about",
-      "Contact": "/contact"
+      "Contact": "/contact",
+      "Special Sessions": "/special-sessions"  // Add route for Special Sessions
     };
 
     // If it's a page route, use React Router

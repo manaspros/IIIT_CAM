@@ -15,6 +15,7 @@ import PrevICMS from './pages/PrevICMS'
 const Home = lazy(() => import('./pages/Home'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
+const SpecialSessionsPage = lazy(() => import('./pages/SpecialSessionsPage'));
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -50,6 +51,7 @@ function App() {
             <Footer /></>} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/special-sessions" element={<SpecialSessionsPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>
