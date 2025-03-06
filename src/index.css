@@ -10,7 +10,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -33,7 +33,7 @@ body {
   place-items: center;
   min-height: 100vh;
   color: black;
-  background-color: white ;
+  background-color: white;
 }
 
 h1 {
@@ -80,8 +80,8 @@ button:focus-visible {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 @layer utilities {
@@ -90,4 +90,3 @@ button:focus-visible {
     color: transparent;
   }
 }
-

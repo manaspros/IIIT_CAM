@@ -10,7 +10,7 @@ export default function KeynoteSpeakers() {
   ));
 
   return (
-    <div className="w-full h-full pt-8">
+    <div className="w-full h-full pt-8" id="keynote-speakers">
       <TitleText text="Keynote Speakers" />
       <Carousel items={cards} />
     </div>

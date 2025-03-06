@@ -33,7 +33,7 @@ export function CardContent({ children, className = "" }) {
 
 export default function Publications() {
   return (
-    <div className="flex flex-col items-start mt-8">
+    <div className="flex flex-col items-start mt-8" id="conference-publications">
       <TitleText text="Publications" />
       {publications.map((pub, index) => (
         <Card key={index} className="mb-4 flex w-full">
