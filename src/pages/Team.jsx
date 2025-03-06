@@ -25,8 +25,8 @@ export default function Team() {
             <motion.div
               key={category}
               className={`px-4 sm:px-6 py-2 rounded-full text-sm font-medium cursor-pointer transition-all ${selectedCategory === category
-                  ? "bg-white text-primary-600 shadow-md"
-                  : "text-gray-600 hover:bg-gray-200/50"
+                ? "bg-white text-primary-600 shadow-md"
+                : "text-gray-600 hover:bg-gray-200/50"
                 }`}
               onClick={() => setSelectedCategory(category)}
               whileHover={{ scale: 1.05 }}

@@ -1,0 +1,101 @@
+[
+    {
+        "id": "pub-001",
+        "title": "Efficient Numerical Methods for Solving Partial Differential Equations in Applied Mathematics",
+        "authors": "Sharma, A., Patel, R., & Johnson, M.",
+        "year": 2023,
+        "type": "Journal Article",
+        "journal": "Journal of Computational Mathematics",
+        "volume": "42",
+        "issue": "3",
+        "pages": "245-267",
+        "doi": "10.1234/jcm.2023.42.3.245",
+        "url": "https://doi.org/10.1234/jcm.2023.42.3.245",
+        "abstract": "This paper presents novel numerical methods for efficiently solving partial differential equations that arise in various applications of applied mathematics. We demonstrate superior convergence rates and stability properties compared to existing methods."
+    },
+    {
+        "id": "pub-002",
+        "title": "Machine Learning Approaches to Solving Complex Mathematical Optimization Problems",
+        "authors": "Kumar, V., Singh, N., & Zhang, L.",
+        "year": 2023,
+        "type": "Conference Paper",
+        "conference": "International Conference on Mathematical Sciences (ICMS)",
+        "pages": "178-185",
+        "doi": "10.1109/ICMS.2023.47892",
+        "url": "https://doi.org/10.1109/ICMS.2023.47892",
+        "abstract": "We explore how machine learning techniques can be applied to solve complex mathematical optimization problems that are difficult to address using traditional methods."
+    },
+    {
+        "id": "pub-003",
+        "title": "Stochastic Analysis of Financial Market Volatility Using Fractal Mathematics",
+        "authors": "Mehta, S., Wilson, J., & Rodriguez, M.",
+        "year": 2022,
+        "type": "Journal Article",
+        "journal": "Journal of Mathematical Finance",
+        "volume": "28",
+        "issue": "2",
+        "pages": "112-134",
+        "doi": "10.1007/jmf.2022.28.2.112",
+        "url": "https://doi.org/10.1007/jmf.2022.28.2.112"
+    },
+    {
+        "id": "pub-004",
+        "title": "Advances in Cryptographic Techniques Based on Number Theory and Abstract Algebra",
+        "authors": "Gupta, R., Thompson, E., & Chen, H.",
+        "year": 2022,
+        "type": "Conference Paper",
+        "conference": "Annual Symposium on Applied Mathematics and Cryptography",
+        "pages": "67-79",
+        "doi": "10.1145/3567812.3567834",
+        "url": "https://doi.org/10.1145/3567812.3567834"
+    },
+    {
+        "id": "pub-005",
+        "title": "Mathematical Modeling of Epidemic Spreading Using Non-Linear Differential Equations",
+        "authors": "Patel, A., Kumar, S., & Nair, V.",
+        "year": 2021,
+        "type": "Journal Article",
+        "journal": "Applied Mathematics and Computation",
+        "volume": "387",
+        "pages": "125-147",
+        "doi": "10.1016/j.amc.2021.125747",
+        "url": "https://doi.org/10.1016/j.amc.2021.125747",
+        "abstract": "This research presents a novel mathematical model for epidemic spreading based on non-linear differential equations, with applications to COVID-19 data analysis."
+    },
+    {
+        "id": "pub-006",
+        "title": "Topological Data Analysis Methods for High-Dimensional Data Visualization",
+        "authors": "Verma, P., Smith, J., & Anderson, T.",
+        "year": 2021,
+        "type": "Book Chapter",
+        "book": "Advanced Topics in Applied Mathematics",
+        "publisher": "Academic Press",
+        "pages": "213-242",
+        "doi": "10.1016/B978-0-12-819040-2.00009-7",
+        "url": "https://doi.org/10.1016/B978-0-12-819040-2.00009-7"
+    },
+    {
+        "id": "pub-007",
+        "title": "Computational Geometric Methods for Mesh Generation in Scientific Computing",
+        "authors": "Mishra, R., Patel, S., & Johnson, R.",
+        "year": 2020,
+        "type": "Journal Article",
+        "journal": "SIAM Journal on Scientific Computing",
+        "volume": "42",
+        "issue": "4",
+        "pages": "B872-B895",
+        "doi": "10.1137/19M1274961",
+        "url": "https://doi.org/10.1137/19M1274961"
+    },
+    {
+        "id": "pub-008",
+        "title": "Quantum Computing Algorithms for Solving Linear Systems of Equations",
+        "authors": "Shah, N., Wang, Y., & Kumar, A.",
+        "year": 2020,
+        "type": "Conference Paper",
+        "conference": "International Conference on Quantum Computing and Applications",
+        "pages": "45-53",
+        "doi": "10.1109/ICQCA.2020.00015",
+        "url": "https://doi.org/10.1109/ICQCA.2020.00015"
+    }
+]

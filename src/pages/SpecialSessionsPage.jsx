@@ -115,7 +115,7 @@ const SpecialSessionsPage = () => {
                                 <div className="text-left ml-auto">
                                     <button
                                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                                        className="flex items-center justify-between w-40 px-4 py-2 bg-white-50/70 border border-blue-100 rounded-md shadow-sm text-[#ffffff] hover:bg-blue-100/50 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all"
+                                        className="flex items-center justify-between w-40 px-4 py-2 bg-white-50/70 border border-blue-100 rounded-md shadow-sm dark:text-[#000000] text-[#ffffff] hover:bg-blue-100/50 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all"
                                     >
                                         <span className="font-medium">Year: {selectedYear}</span>
                                         <ChevronDown size={16} className={`transition-transform text-blue-400 ${isDropdownOpen ? 'transform rotate-180' : ''}`} />
