@@ -193,6 +193,7 @@ export default function Navbar() {
                         ${item === "Overview" ||
                           item === "Keynote Speakers" ||
                           item === "Program" ||
+                          item === "Special Sessions" ||
                           item === "Conference Publications" ||
                           item === "Previous ICMS Links" ||
                           item === "About" ||
@@ -208,6 +209,7 @@ export default function Navbar() {
                       <ChevronRight size={18} className={item === "Overview" ||
                         item === "Keynote Speakers" ||
                         item === "Program" ||
+                        item === "Special Sessions" ||
                         item === "Conference Publications" ||
                         item === "Previous ICMS Links" ||
                         item === "About" ||

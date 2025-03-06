@@ -1,68 +1,131 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 import Footer from '../components/Footer/Footer';
 import TitleText from '../components/TitleText';
 import Timeline from '../components/timeline';
 
-// Sample special session data
-const specialSessions = [
-    {
-        id: 1,
-        title: "Numerical Methods for Differential Equations",
-        date: "2023-12-15",
-        time: "10:00 - 12:30",
-        organizers: "Dr. Rajesh Kumar & Dr. Sunita Sharma",
-        description: "This session focuses on advanced numerical techniques for solving partial differential equations with applications in computational fluid dynamics and climate modeling.",
-        venue: "Lecture Hall 1",
-        speakers: [
-            "Prof. Amit Verma, IIT Delhi",
-            "Dr. Priya Gupta, IISC Bangalore",
-            "Prof. Michael Chen, MIT (Virtual)"
-        ]
-    },
-    {
-        id: 2,
-        title: "Machine Learning for Mathematical Optimization",
-        date: "2023-12-15",
-        time: "14:00 - 16:30",
-        organizers: "Dr. Neha Patil & Dr. Rajiv Mishra",
-        description: "Exploring the intersection of machine learning algorithms and mathematical optimization techniques with applications in data science and operations research.",
-        venue: "Seminar Hall 3",
-        speakers: [
-            "Dr. Anand Kulkarni, Microsoft Research",
-            "Prof. Lisa Zhang, University of Toronto",
-            "Dr. Sanjay Mehrotra, Northwestern University"
-        ]
-    },
-    {
-        id: 3,
-        title: "Algebraic Coding Theory and Cryptography",
-        date: "2023-12-16",
-        time: "09:30 - 12:00",
-        organizers: "Prof. Ravi Shankar & Dr. Meena Agarwal",
-        description: "This session covers recent advances in algebraic coding theory and its applications in modern cryptographic systems, including post-quantum cryptography.",
-        venue: "Conference Hall A",
-        speakers: [
-            "Prof. Sanjeev Kumar, IIT Bombay",
-            "Dr. Anjali Singh, ISI Kolkata",
-            "Prof. Richard Thompson, ETH Zurich"
-        ]
-    },
-    {
-        id: 4,
-        title: "Financial Mathematics and Risk Analysis",
-        date: "2023-12-16",
-        time: "14:30 - 17:00",
-        organizers: "Dr. Vikram Nair & Dr. Priya Deshmukh",
-        description: "Exploring mathematical models for financial markets, risk assessment, and portfolio optimization in the context of modern economic challenges.",
-        venue: "Lecture Hall 2",
-        speakers: [
-            "Prof. Ramesh Jha, Indian School of Business",
-            "Dr. Sarah Chen, London School of Economics",
-            "Prof. Rahul Varma, NYU Stern"
-        ]
-    }
-];
+// Sample special session data with different years
+const allSessions = {
+    "2023": [
+        {
+            id: 1,
+            title: "Numerical Methods for Differential Equations",
+            date: "2023-12-15",
+            time: "10:00 - 12:30",
+            organizers: "Dr. Rajesh Kumar & Dr. Sunita Sharma",
+            description: "This session focuses on advanced numerical techniques for solving partial differential equations with applications in computational fluid dynamics and climate modeling.",
+            venue: "Lecture Hall 1",
+            speakers: [
+                "Prof. Amit Verma, IIT Delhi",
+                "Dr. Priya Gupta, IISC Bangalore",
+                "Prof. Michael Chen, MIT (Virtual)"
+            ]
+        },
+        {
+            id: 2,
+            title: "Machine Learning for Mathematical Optimization",
+            date: "2023-12-15",
+            time: "14:00 - 16:30",
+            organizers: "Dr. Neha Patil & Dr. Rajiv Mishra",
+            description: "Exploring the intersection of machine learning algorithms and mathematical optimization techniques with applications in data science and operations research.",
+            venue: "Seminar Hall 3",
+            speakers: [
+                "Dr. Anand Kulkarni, Microsoft Research",
+                "Prof. Lisa Zhang, University of Toronto",
+                "Dr. Sanjay Mehrotra, Northwestern University"
+            ]
+        },
+        {
+            id: 3,
+            title: "Algebraic Coding Theory and Cryptography",
+            date: "2023-12-16",
+            time: "09:30 - 12:00",
+            organizers: "Prof. Ravi Shankar & Dr. Meena Agarwal",
+            description: "This session covers recent advances in algebraic coding theory and its applications in modern cryptographic systems, including post-quantum cryptography.",
+            venue: "Conference Hall A",
+            speakers: [
+                "Prof. Sanjeev Kumar, IIT Bombay",
+                "Dr. Anjali Singh, ISI Kolkata",
+                "Prof. Richard Thompson, ETH Zurich"
+            ]
+        },
+        {
+            id: 4,
+            title: "Financial Mathematics and Risk Analysis",
+            date: "2023-12-16",
+            time: "14:30 - 17:00",
+            organizers: "Dr. Vikram Nair & Dr. Priya Deshmukh",
+            description: "Exploring mathematical models for financial markets, risk assessment, and portfolio optimization in the context of modern economic challenges.",
+            venue: "Lecture Hall 2",
+            speakers: [
+                "Prof. Ramesh Jha, Indian School of Business",
+                "Dr. Sarah Chen, London School of Economics",
+                "Prof. Rahul Varma, NYU Stern"
+            ]
+        }
+    ],
+    "2024": [
+        {
+            id: 5,
+            title: "Quantum Computing and Algorithms",
+            date: "2024-11-10",
+            time: "09:30 - 12:00",
+            organizers: "Dr. Lakshmi Narayan & Dr. Alex Wong",
+            description: "Exploring quantum algorithms and their applications in solving complex mathematical problems that are intractable with classical computers.",
+            venue: "Quantum Computing Lab",
+            speakers: [
+                "Dr. Rakesh Sharma, Microsoft Quantum",
+                "Prof. Jane Chen, University of California",
+                "Dr. David Clark, IBM Research"
+            ]
+        },
+        {
+            id: 6,
+            title: "Topological Data Analysis",
+            date: "2024-11-10",
+            time: "14:00 - 16:30",
+            organizers: "Prof. Ananya Roy & Dr. William Johnson",
+            description: "Applications of algebraic topology to extract insights from complex high-dimensional data sets across various domains.",
+            venue: "Data Science Center",
+            speakers: [
+                "Prof. Sanjay Mukherjee, Stanford University",
+                "Dr. Emily Zhang, Google Research",
+                "Prof. Robert Patel, University of Michigan"
+            ]
+        }
+    ],
+    "2025": [
+        {
+            id: 7,
+            title: "Mathematical Biology and Epidemiology",
+            date: "2025-10-05",
+            time: "11:00 - 13:30",
+            organizers: "Prof. Nikhil Mehta & Dr. Sarah Thompson",
+            description: "Mathematical modeling of biological systems and disease spread, with focus on predictive models for epidemic control.",
+            venue: "Bioscience Auditorium",
+            speakers: [
+                "Dr. Meera Joshi, WHO Research Division",
+                "Prof. Thomas Wilson, Cambridge University",
+                "Dr. Anita Desai, National Institute of Epidemiology"
+            ]
+        },
+        {
+            id: 8,
+            title: "AI and Mathematical Reasoning",
+            date: "2025-10-06",
+            time: "10:00 - 12:30",
+            organizers: "Dr. Vikram Singh & Prof. Lisa Wong",
+            description: "Exploring the intersection of artificial intelligence and mathematical reasoning, including automated theorem proving and AI-assisted mathematics.",
+            venue: "AI Research Center",
+            speakers: [
+                "Prof. Rajiv Malhotra, DeepMind",
+                "Dr. Jennifer Lee, MIT CSAIL",
+                "Prof. Alan Turner, Oxford University"
+            ]
+        }
+    ]
+};
 
 // Format the special sessions data to match Timeline component requirements
 const formatTimelineData = (sessions) => {
@@ -92,7 +155,7 @@ const formatTimelineData = (sessions) => {
                 </div>
 
                 <div className="mt-4 text-right">
-                    <button className="text-[#4671AF] hover:text-blue-800 font-medium flex items-center text-sm ml-auto transition-all">
+                    <button className="text-[#21272f] hover:text-blue-800 font-medium flex items-center text-sm ml-auto transition-all">
                         View Details
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -105,12 +168,17 @@ const formatTimelineData = (sessions) => {
 };
 
 const SpecialSessionsPage = () => {
+    // State for selected year
+    const [selectedYear, setSelectedYear] = useState("2023");
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const years = Object.keys(allSessions).sort().reverse(); // Sort years in descending order
+
+    // Format the sessions data for the selected year
+    const timelineData = formatTimelineData(allSessions[selectedYear] || []);
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
-    // Format the sessions data for the Timeline component
-    const timelineData = formatTimelineData(specialSessions);
 
     return (
         <div className="min-h-screen bg-gray-50">
@@ -154,11 +222,53 @@ const SpecialSessionsPage = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.4, duration: 0.8 }}
-                        className="bg-gray-50 rounded-xl overflow-hidden"
+                        className="mb-12"
                     >
-                        <TitleText text="Schedule" />
-                        <div className="mt-8">
-                            <Timeline data={timelineData} />
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+                            <TitleText text="Schedule" />
+
+                            {/* Year selector dropdown with lighter colors */}
+                            <div className="relative">
+                                <div className="text-left ml-auto">
+                                    <button
+                                        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                                        className="flex items-center justify-between w-40 px-4 py-2 bg-white-50/70 border border-blue-100 rounded-md shadow-sm text-[#ffffff] hover:bg-blue-100/50 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all"
+                                    >
+                                        <span className="font-medium">Year: {selectedYear}</span>
+                                        <ChevronDown size={16} className={`transition-transform text-blue-400 ${isDropdownOpen ? 'transform rotate-180' : ''}`} />
+                                    </button>
+                                </div>
+
+                                {isDropdownOpen && (
+                                    <div className="absolute right-0 mt-1 w-40 bg-white/90 backdrop-blur-sm border border-blue-100 rounded-md shadow-lg z-20">
+                                        {years.map((year) => (
+                                            <button
+                                                key={year}
+                                                onClick={() => {
+                                                    setSelectedYear(year);
+                                                    setIsDropdownOpen(false);
+                                                }}
+                                                className={`block w-full text-left px-4 py-2 hover:bg-blue-50 transition-colors ${selectedYear === year
+                                                    ? 'bg-blue-100/70 text-[#000000] font-medium'
+                                                    : 'text-gray-700'
+                                                    }`}
+                                            >
+                                                {year}
+                                            </button>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+
+                        <div className="bg-gray-50 rounded-xl overflow-hidden">
+                            {timelineData.length > 0 ? (
+                                <Timeline data={timelineData} />
+                            ) : (
+                                <div className="p-12 text-center">
+                                    <p className="text-lg text-gray-500">No sessions available for {selectedYear}.</p>
+                                </div>
+                            )}
                         </div>
                     </motion.div>
 
@@ -182,8 +292,8 @@ const SpecialSessionsPage = () => {
                                 <li>Estimated duration and format of the session</li>
                             </ul>
                             <p className="mb-6">
-                                Proposals should be submitted by <strong>October 15, 2023</strong>. Decisions will be
-                                communicated by <strong>October 30, 2023</strong>.
+                                Proposals for {parseInt(selectedYear) + 1} should be submitted by <strong>October 15, {selectedYear}</strong>. Decisions will be
+                                communicated by <strong>November 30, {selectedYear}</strong>.
                             </p>
                             <button className="btn-3d bg-[#4671AF] text-white px-6 py-3 rounded-md font-medium hover:bg-[#365c8d] transition-colors">
                                 Submit Proposal
