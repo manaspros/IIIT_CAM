@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const menuItems = [
   "Overview",
@@ -24,6 +24,7 @@ export default function Navbar() {
   const [isButtonAnimating, setIsButtonAnimating] = useState(false);
   const sidebarRef = useRef(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,14 +51,14 @@ export default function Navbar() {
     const pageRoutes = {
       "About": "/about",
       "Contact": "/contact",
-      "Special Sessions": "/special-sessions"  // Add route for Special Sessions
+      "Special Sessions": "/special-sessions"
     };
 
-    // If it's a page route, use React Router
+    // If it's a page route, use React Router's navigate
     if (pageRoutes[item]) {
       setIsOpen(false);
       setTimeout(() => {
-        window.location.href = pageRoutes[item];
+        navigate(pageRoutes[item]);
       }, 300);
       return;
     }
@@ -78,8 +79,8 @@ export default function Navbar() {
     }, 300);
 
     // If we're not on the homepage and need to navigate to a section
-    if (location.pathname !== '/' && !pageRoutes[item]) {
-      window.location.href = `/#${id}`;
+    if (location.pathname !== '/') {
+      navigate(`/#${id}`);
       return;
     }
 
@@ -95,7 +96,7 @@ export default function Navbar() {
     } else {
       // If element doesn't exist, navigate to home with hash
       setTimeout(() => {
-        window.location.href = `/#${id}`;
+        navigate(`/#${id}`);
       }, 400);
     }
   };

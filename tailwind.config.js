@@ -5,28 +5,28 @@ export default {
     extend: {
       colors: {
         primary: {
-          50: "#f8fbff",
-          100: "#e3f2ff",
-          200: "#cce6ff",
-          300: "#b3daff",
-          400: "#99ceff",
-          500: "#80c2ff", // Lighter primary color
-          600: "#66b5ff",
-          700: "#4da8ff",
-          800: "#339bff",
-          900: "#1a8eff",
+          50: "#eef5ff",
+          100: "#d9e8ff",
+          200: "#bcd7ff",
+          300: "#8bbeff",
+          400: "#559aff",
+          500: "#4671AF", // Main primary color
+          600: "#3357a1",
+          700: "#2d4484",
+          800: "#293b6d",
+          900: "#27355b",
         },
         secondary: {
-          50: "#f5fdff",
-          100: "#e8fbff",
-          200: "#d1f7ff",
-          300: "#baf3ff",
-          400: "#a3efff",
-          500: "#8ceaff", // Lighter secondary color
-          600: "#75e6ff",
-          700: "#5ee2ff",
-          800: "#47deff",
-          900: "#30d9ff",
+          50: "#f0f9ff",
+          100: "#e0f2fe",
+          200: "#b9e6fe",
+          300: "#7cd3fd",
+          400: "#36bffa",
+          500: "#0ba5ec",
+          600: "#0284c7",
+          700: "#036ba1",
+          800: "#075985",
+          900: "#0c4a6e",
         },
       },
       fontFamily: {
